@@ -1,0 +1,15 @@
+ion-content ion-toolbar {
+  --background: translucent;
+}
+
+#today-special-label {
+  font-size: 1.5em;
+  margin-left: 10px;
+}
+#today-special-slide {
+  padding: 25px;
+}
+#today-special-slide img {
+  height: 200px;
+  max-width: 90%;
+}

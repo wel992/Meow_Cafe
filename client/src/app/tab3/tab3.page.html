@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      History
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" reload="true">
+  <ion-list>
+    <ion-card *ngFor="let order of orderList">
+      <ion-card-header>
+        <ion-card-title>{{order.time}}</ion-card-title>
+        <ion-card-subtitle>{{order.id}}</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-header *ngFor="let item of order.coffees">
+        <ion-card-title>{{item.name}}</ion-card-title>
+        <ion-card-subtitle>{{item.quantity}}</ion-card-subtitle>
+        <ion-input aria-placeholder="Please write feedback for us improve" [(ngModel)]="this.order.feedback"></ion-input>
+      </ion-card-header>
+
+
+    </ion-card>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Cart</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="tabs/menu"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item-group *ngFor="let item of cartList">
+      <ion-item *ngIf="item.quantity >0">
+        <ion-item-divider>
+          <ion-label>{{item.name}}</ion-label>
+        </ion-item-divider>
+        <br />
+        <ion-item-divider>
+          <ion-button fill="clear" (click)="ReduceClick(item.name)">
+            <ion-icon slot="icon-only" name="remove-outline"></ion-icon>
+          </ion-button>
+          <ion-label>{{item.quantity}}</ion-label>
+          <ion-button fill="clear" (click)="AddClick(item.name)">
+            <ion-icon slot="icon-only" name="add-outline"></ion-icon>
+          </ion-button>
+        </ion-item-divider>
+      </ion-item>
+    </ion-item-group>
+    <ion-item>{{this.total_price.toFixed(2)}}</ion-item>
+  </ion-list>
+  <ion-button (click)="pay()">pay</ion-button>
+
+</ion-content>

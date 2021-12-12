@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{menuItem.name}}</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <img [src]="menuItem.imageUrl" />
+  <br />
+  <ion-label>{{menuItem.describe}}</ion-label>
+  <br />
+  <ion-label>${{menuItem.price}}</ion-label>
+  <ion-item>
+    <ion-button fill="clear" (click)="ReduceClick()">
+      <ion-icon slot="icon-only" name="remove-outline"></ion-icon>
+    </ion-button>
+    <!-- style="font-weight: 150; margin: auto; color:#636300d5; font-size: 18em;" -->
+    <ion-label id="count">{{SelectAcount}}</ion-label>
+    <ion-button fill="clear" (click)="AddClick()">
+      <ion-icon slot="icon-only" name="add-outline"></ion-icon>
+    </ion-button>
+  </ion-item>
+  <ion-button (click)="add_to_cart()">Add to Cart</ion-button>
+</ion-content>

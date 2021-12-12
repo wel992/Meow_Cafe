@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <img src="https://www.bing.com/th/id/OIP.Uq7Jg_gif7QqIsCHVBxqCgHaFC?pid=Api&rs=1" />
+    <ion-card-header>
+      <ion-card-title>{{weather.temperature.toFixed(1)}} °C</ion-card-title>
+      <ion-card-subtitle>{{weather.summary}}</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      Daily greetings...
+    </ion-card-content>
+  </ion-card>
+
+  <ion-label id="today-special-label">Today's Special</ion-label>
+
+  <ion-slides id="today-special-slide" pager="true">
+    <ion-slide *ngFor="let coffee of specialCoffee">
+        <div>
+          <img id="img1" [src]="coffee.imageUrl" />
+          <br />
+          <ion-label id="lab1">{{coffee.name}}</ion-label>
+        </div>
+    </ion-slide>
+  </ion-slides>
+</ion-content>

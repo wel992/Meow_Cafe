@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>User</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div *ngIf="!user.userId">
+    <ion-item>
+      <ion-label position="floating">Username</ion-label>
+      <ion-input type="email" clearInput placeholder="Enter your username" [(ngModel)]="this.user.username"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password" clearInput placeholder="Enter your password" [(ngModel)]="this.user.password"></ion-input>
+    </ion-item>
+    <ion-button expand="block" (click)="signIn()">Sign In</ion-button>
+    <ion-button expand="block" (click)="enterSignUp()"fill="outline">Sign Up</ion-button>
+  </div>
+  <!-- <div *ngIf="user.userId">
+    <ion-item>
+      <ion-label position="floating">Username:</ion-label>
+      <ion-item >Hello {{this.user.username}}!</ion-item>
+    </ion-item>
+
+    <ion-button expand="block" (click)="goShopping()"fill="outline">Go Shopping</ion-button>
+
+    <ion-button expand="block" (click)="ionViewDidEnter()"fill="outline">Sign Out</ion-button>
+    
+  </div> -->
+</ion-content>
