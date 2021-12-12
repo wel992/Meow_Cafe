@@ -5,7 +5,7 @@
 clone all CMPT370international folder (may unzip too)
 
 ``` sh
-git clone https://git.cs.usask.ca/zhz361/cmpt370international.git
+git clone https://github.com/wel992/Meow_Cafe.git
 ```
 
 # For back end
