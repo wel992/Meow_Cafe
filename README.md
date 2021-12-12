@@ -1,4 +1,4 @@
-# CMPT370international
+# CMPT370
 
 # Please install Node.js environment
 
